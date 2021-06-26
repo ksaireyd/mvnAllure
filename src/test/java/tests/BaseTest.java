@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import pages.SearchPage;
 
+
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
