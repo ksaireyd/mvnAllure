@@ -29,6 +29,7 @@ public class BaseTest {
         options.addArguments("--headless"); //should be enabled for Jenkins
         options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
         options.addArguments("--window-size=1920x1080"); //should be enabled for Jenkins
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("https://www.google.com.ua/?hl=ru");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
