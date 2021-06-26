@@ -1,7 +1,10 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
     WebDriver driver;
@@ -13,5 +16,10 @@ public class BasePage {
 
     public String getCurrentURL(){
         return driver.getCurrentUrl();
+    }
+
+    public void waitForVis(WebElement el){
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(el));
     }
 }

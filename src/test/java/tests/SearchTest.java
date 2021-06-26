@@ -13,7 +13,7 @@ import pages.WikiPage;
 @Listeners(Listener.class)
 public class SearchTest extends BaseTest{
     private final String query = "hippotigris";
-    private String url = "wiki/Zebra";
+    private String url = "wiki/%D0%97%D0%B5%D0%B1%D1%80%D1%8B";
     private String wrongUrl = "wiki/NotZebra";
     SearchPage searchPage;
     WikiPage wikiPage;

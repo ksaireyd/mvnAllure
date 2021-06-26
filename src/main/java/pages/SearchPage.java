@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 public class SearchPage extends  BasePage{
@@ -14,7 +15,7 @@ public class SearchPage extends  BasePage{
 
     @FindBy(name = "q")
     private WebElement searchField;
-    @FindBy(xpath = "//a/h3[contains(text(),'Zebra')]")
+    @FindBy(xpath = "//a/h3[contains(text(),'Зебры')]")
     private WebElement wikiLink;
 
     @Step("Enter key word {0} in searching filed")
@@ -22,7 +23,9 @@ public class SearchPage extends  BasePage{
         searchField.sendKeys(query, Keys.ENTER);
     }
     @Step("Open wikipedia page")
+
     public void clickWiki(){
         wikiLink.click();
+
     }
 }
